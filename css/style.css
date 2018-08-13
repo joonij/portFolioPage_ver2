@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto');
+@font-face{font-family:"LemonMilk"; src:url("../fonts/LemonMilk.otf")}
+/* default */
+.hidden {display: none !important;}
+.loadcover {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -10; text-align: center; color: #fff; font-size: 50px;}
+.loadcover .bar {position: absolute; left: 0; width: 100%; height: 20%; background: #bbb; -webkit-transform-origin: top center; transform-origin: top center; transition: -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1); transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);}
+.loadcover .bar:nth-child(1) {top: 0;}
+.loadcover .bar:nth-child(2) {top: 10%;}
+.loadcover .bar:nth-child(3) {top: 20%;}
+.loadcover .bar:nth-child(4) {top: 30%;}
+.loadcover .bar:nth-child(5) {top: 40%;}
+.loadcover .bar:nth-child(6) {top: 50%;}
+.loadcover .bar:nth-child(7) {top: 60%;}
+.loadcover .bar:nth-child(8) {top: 70%;}
+.loadcover .bar:nth-child(9) {top: 80%;}
+.loadcover .bar:nth-child(10) {top: 90%;}
+.loadcover.loading .bar {-webkit-transform: scaleY(0); transform: scaleY(0);}
+.loadcover.loading .bar:nth-child(1) {-webkit-transition-delay: 0.02s; transition-delay: 0.02s;}
+.loadcover.loading .bar:nth-child(2) {-webkit-transition-delay: 0.04s; transition-delay: 0.04s;}
+.loadcover.loading .bar:nth-child(3) {-webkit-transition-delay: 0.06s; transition-delay: 0.06s;}
+.loadcover.loading .bar:nth-child(4) {-webkit-transition-delay: 0.08s; transition-delay: 0.08s;}
+.loadcover.loading .bar:nth-child(5) {-webkit-transition-delay: 0.1s; transition-delay: 0.1s;}
+.loadcover.loading .bar:nth-child(6) {-webkit-transition-delay: 0.12s; transition-delay: 0.12s; }
+.loadcover.loading .bar:nth-child(7) {-webkit-transition-delay: 0.14s; transition-delay: 0.14s;}
+.loadcover.loading .bar:nth-child(8) {-webkit-transition-delay: 0.16s; transition-delay: 0.16s;}
+.loadcover.loading .bar:nth-child(9) {-webkit-transition-delay: 0.18s; transition-delay: 0.18s;}
+.loadcover.loading .bar:nth-child(10) {-webkit-transition-delay: 0.2s; transition-delay: 0.2s;}
+.loadcover.loaded {pointer-events: none;}
+.loadcover.noload .bar {-webkit-transform: scaleY(1); transform: scaleY(1);}
+.loadcover.noload .bar:nth-child(1) {-webkit-transition-delay: 0.2s; transition-delay: 0.2s;}
+.loadcover.noload .bar:nth-child(2) {-webkit-transition-delay: 0.18s; transition-delay: 0.18s;}
+.loadcover.noload .bar:nth-child(3) {-webkit-transition-delay: 0.16s; transition-delay: 0.16s;}
+.loadcover.noload .bar:nth-child(4) {-webkit-transition-delay: 0.14s; transition-delay: 0.14s;}
+.loadcover.noload .bar:nth-child(5) {-webkit-transition-delay: 0.12s; transition-delay: 0.12s;}
+.loadcover.noload .bar:nth-child(6) {-webkit-transition-delay: 0.1s; transition-delay: 0.1s;}
+.loadcover.noload .bar:nth-child(7) {-webkit-transition-delay: 0.08s; transition-delay: 0.08s;}
+.loadcover.noload .bar:nth-child(8) {-webkit-transition-delay: 0.06s; transition-delay: 0.06s;}
+.loadcover.noload .bar:nth-child(9) {-webkit-transition-delay: 0.04s; transition-delay: 0.04s;}
+.loadcover.noload .bar:nth-child(10) {-webkit-transition-delay: 0.02s; transition-delay: 0.02s;}
+/* row_1 */
+#row_1 {position: fixed; width: 100%; background: url(../img/11111.jpg) no-repeat center; background-size: cover;}
+#row_1 span {color: #fff; font-family: 'Roboto', sans-serif;}
+#row_1 p {position: absolute; top: 50%; left:50%;}
+#row_1 p > span:first-child {display: block; font-size: 50px;}
+#row_1 p > span:last-child {display: block; font-size: 150px; font-weight: bolder;}
+#row_1 p > span:last-child span{font-weight: normal; color: transparent; -webkit-text-stroke-color: #fff; -webkit-text-stroke-width: 2px;}
+#row_1 .col-md-12 > span {position: absolute; bottom:7%; left:50%; transform: translateX(-50%); font-size: 20px; font-weight: bolder; letter-spacing: 3px; animation-name: flash; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: linear;}
+@keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+/* row_2 */
+#row_2 {position: relative; background: url(../img/11111.jpg) no-repeat center; background-size: cover;}
+#row_2 .col-md-12 {background: rgba(0,0,0,0.5);}
+#row_2 .col-md-5:nth-child(1) {padding-top: 100px;}
+#row_2 .col-md-5:nth-child(1) span {display: block; color: #fff;}
+#row_2 .col-md-5:nth-child(1) span:first-child {font-size: 80px; margin-bottom: 10px;}
+#row_2 .col-md-5:last-child div {position: absolute; bottom: 10%; right: 10%;}
+#row_2 .sk_main {font-size: 30px;}
+#row_2 .sk_sub {padding-left: 20px; font-size: 16px;}
+#row_2 .col-md-5:last-child span:nth-child(1) {display: block; font-size: 32px; color: #ab2bfa;}
+#row_2 .col-md-5:last-child span:nth-child(2) {display: block; font-size: 12px; color: #a6a6a6;}
+#row_2 .col-md-5:last-child .fas {width: 30px; font-size:20px; color: #ab2bfa; text-align: center;}
+#row_2 .col-md-5:last-child span {display: inline-block; margin-top: 10px;font-size: 16px; font-family:"LemonMilk";}
+#row_2 .col-md-5:last-child span a{font-size: 16px; color:#fff;}
+#row_2 .col-md-5:last-child span a button {width: 200px; height: 50px; border: none;}
+#row_2 .col-md-5:last-child span a #github {background: #666;}
+#row_2 .col-md-5:last-child span a #blog {background: #ab2bfa;}
+/* row_3 */
+#row_3 {position: relative; background: #fff; background-size: cover;}
+.project {position:relative; height: 170px; padding: 0; transition: all 0.2s;}
+.project:hover {background-color: rgba(230,230,230,0.5);}
+.project span {display: inline-block; margin-right:1px; padding: 0 7px; border-radius: 10px; font-family: 'Nanum Gothic', sans-serif; color:#fff; background: #ab2bfa; font-size: 12px;}
+.project > span {display: block; padding-top: 30px; margin-left: 20%; font-weight: bolder; font-size: 40px; color:#000; background: none;}
+.project > p {margin-left: 20%; width: 800px;}
+.project > p span:nth-child(1) {display:block; margin-bottom: 10px; font-size:16px; letter-spacing: -1px; color:#888; background: none;}
+.project > p span:nth-child(2) {margin-left: 5px;}
+.plus-to-minus {position: absolute; top: 50px; right: 25%; width: 60px; height: 60px; cursor: pointer; transition: -webkit-transform ease 400ms; transition: transform ease 400ms;}
+.plus-to-minus:before, .plus-to-minus:after { content: ""; position: absolute; background-color: #666; border-radius: 10px;}
+    /*세로*/
+.plus-to-minus:before { left: 50%; margin-left: -2px; width: 4px; height: 60px;}
+    /*가로*/
+.plus-to-minus:after { top: 50%; margin-top: -2px; height: 4px; width: 60px; transition: -webkit-transform ease 400ms; transition: transform ease 400ms;}
+.plus-to-minus.minus { -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+.plus-to-minus.minus:after { -webkit-transform: rotate(-90deg); transform: rotate(-90deg);}
+    /* detail */
+.detail {display:none;}
+.detail button {width: 100%; height:50px; margin: 50px auto 0px auto; border: none; border-radius: 10px; background-color: #ab2bfa; font-size: 20px; color: #fff;}
+.detail .period {display:block; margin-bottom: 50px; font-size:13px; font-family: 'Nanum Gothic', sans-serif; letter-spacing: -1px; color:#000; text-align: center; background: none;}
+.detail .project_img {border: 2px solid #969696; padding: 1px;}
+.detail p {display:block; height: 350px;}
+.detail p .far {width: 30px; font-size: 18px; color: #ab2bfa;}
+.detail span {display: inline-block; margin: 0; margin-bottom: 20px; padding: 0; font-family:"Maplestory Light", 'Hi Melody'; color:#444; background: none; font-size: 18px; text-align: left;}
+.detail span:nth-child(1) {font-size: 32px; color:#000;}
+#connect_1 {margin-bottom: 0;}
+#connect_2 {margin-left: 35px;}
+
+@media all and (max-width: 1020px) {
+    .project > span {margin-left: 10%; font-size: 35px;}
+    .project > p {margin-left: 10%; width: 500px;}
+    .plus-to-minus {right: 10%;}
+}
+@media all and (max-width: 600px) {
+    .project > span {margin-left: 0; font-size: 22px;}
+    .project > p {margin-left: 5px; width: 300px;}
+    .project > p span:nth-child(1) {font-size:12px;}
+    .project > p span:nth-child(2) {margin-left: 0;}
+    .plus-to-minus {right: 5px; width: 30px; height: 30px;}
+    .plus-to-minus:before {height: 30px;}
+    .plus-to-minus:after {width: 30px;}
+}
