@@ -1,11 +1,15 @@
 $(document).ready(function(){
+    //해상도 변경시
+    $(window).resize(function(){
+        //새로고침
+        location.reload();
+    });
     // ie check
-    
-        var agent = navigator.userAgent.toLowerCase();
-        if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
-            // ie일 경우
-            $("#row_1 p > span span").css("color", "#fff");
-        }
+    var agent = navigator.userAgent.toLowerCase();
+    if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+        // ie일 경우
+        $("#row_1 p > span span").css("color", "#fff");
+    }
     // 해상도
     if ($(window).width() <= 1100) {
         $("#row_2 .col-md-5").removeClass("full").addClass("half");
@@ -40,13 +44,7 @@ $(document).ready(function(){
     }
     if ($(window).width() <= 600) {
         $(".sk_sub").addClass("hidden");
-        
     }
-     //해상도 변경시
-    $(window).resize(function(){
-        //새로고침
-        location.reload();
-    });
     // heigth
     var ht = $(window).height();
     var ht_2 = ht / 2;
@@ -60,11 +58,17 @@ $(document).ready(function(){
 	$( '.plus-to-minus' ).click(function(event){
         $(this).toggleClass( 'minus' );
         if($(this).parent().css("height") === "170px") {
-            $(this).parent().css("height","auto");
+            $(this).parent().css({
+                "height":"auto",
+                "background":"rgba(230,230,230,0.5)"
+            });
             $(this).siblings(".detail").fadeIn(500);
         } else {
             $(this).siblings(".detail").fadeOut(200, function(){
-                $(this).parent().css("height","170px");
+                $(this).parent().css({
+                    "height":"170px",
+                    "background":"none"
+                });
             });
         }
     });
