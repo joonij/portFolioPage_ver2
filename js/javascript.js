@@ -8,9 +8,10 @@ $(document).ready(function(){
         }
     // 해상도
     if ($(window).width() <= 1100) {
-        $(".com").addClass("hidden");
-        $(".phone").removeClass("hidden");
-        $("#row_1 .phone").click(function(){
+        $("#row_2 .col-md-5").removeClass("full").addClass("half");
+        $(".scroll").addClass("hidden");
+        $(".touch").removeClass("hidden");
+        $("#row_1 .touch").click(function(){
             $(".loadcover").css("z-index", "10");
             $(".loadcover").removeClass("loading").addClass("noload");
             $("#row_1 p").fadeOut(1100, function(){
@@ -23,7 +24,7 @@ $(document).ready(function(){
                 });
             });
         });
-        $("#row_2 .phone").click(function(){
+        $("#row_2 .touch").click(function(){
             $(".loadcover").css("z-index", "10");
             $(".loadcover").removeClass("loading").addClass("noload");
             $("#row_2 .col-xs-12").fadeOut(1100, function(){
@@ -39,7 +40,7 @@ $(document).ready(function(){
     }
     if ($(window).width() <= 600) {
         $(".sk_sub").addClass("hidden");
-        $("#row_2 .col-md-5").removeClass("full").addClass("half");
+        
     }
      //해상도 변경시
     $(window).resize(function(){
