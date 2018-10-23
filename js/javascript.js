@@ -1,9 +1,4 @@
 $(document).ready(function(){
-//해상도 변경시
-    $(window).resize(function(){
-    //새로고침
-        location.reload();
-    });
 // ie check
     var agent = navigator.userAgent.toLowerCase();
     if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
@@ -30,11 +25,6 @@ $(document).ready(function(){
             }
         });
     }
-// heigth
-    var ht = $(window).height();
-    var ht_2 = ht / 2;
-    $(".full").css("height", ht);
-    $(".half").css("height", ht_2);
 // Start
     $(".row").fadeIn(1000, function(){
         $("#main_text").fadeIn(250);
